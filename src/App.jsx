@@ -1,42 +1,21 @@
-import { useState } from 'react'
-import './App.css'
-import SinglePlayer from './components/SinglePlayer.jsx'
-import NewPlayerForm from './components/NewPlayerForm.jsx'
-import { Routes, Route, Link } from "react-router-dom"
-import Navbar from './components/NavBar'
-import Registration from './components/Registration.jsx'
-import AllPlayers from './components/AllPlayers.jsx'
-const cohortName = "2308-ACC-ET-WEB-PT-A";
-const APIURL = `https://fsa-puppy-bowl.herokuapp.com/api/${cohortName}/`;
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import AllPlayers from "./components/AllPlayers";
+import SinglePlayer from "./components/SinglePlayer";
+import Navbar from "./components/Navbar";
+import CreatePlayerForm from "./components/CreatePlayerForm";
 
-function App () {
-  const [user, setUser] = useState(null);
+function App() {
   return (
-    <div>
-        <h1>Introducing the Puppy Bowl</h1>
-        <Navbar user={user}/>
-        <main>
-        <Routes>
-            <Route path="/" element={<div>All Players</div>} />
-            <Route path="/SinglePlayer" element={<SinglePlayer user={user} setUser={setUser} />} />
-            <Route path="/NewPlayerForm" element={<NewPlayerForm user={user} setUser={setUser} />} />
-            <Route path="/Registration" element={<Registration user={user} setUser={setUser} />} />          
-            <Route path="/AllPlayers" element={<AllPlayers user={user} setUser={setUser} />} />
-          </Routes>
-        </main>
-        
-
-
-                      
-
-
-
-      </div>
-  )
+    <div className="App">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<AllPlayers />} />
+        <Route path="/:id" element={<SinglePlayer />} />
+        <Route path="/add-player" element={<CreatePlayerForm />} />
+      </Routes>
+    </div>
+  );
 }
-  
-    
-  
 
-export default App
-
+export default App;

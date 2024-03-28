@@ -46,6 +46,11 @@ h1 {
     font-size: large;
   }
 
+  h3 {
+    justify-content: space-evenly;
+    color: blueviolet;
+    display: flex;
+  }
 
 
   /* #main-section > div {

@@ -1,27 +1,14 @@
 import { Link } from "react-router-dom";
+import styles from "../css/Navbar.module.css";
 
-const Navbar = ({ user }) => {
+export default function Navbar() {
   return (
-    <nav>
-      <ul>
-        
-        {!user && 
-          <>
-            <li>
-                <Link to="AllPlayers">All Players</Link>
-            </li>
-            <li>
-              <Link to="NewPlayerForm">New Player Form</Link>
-            </li>
-            <li>
-              <Link to="Registration">Registration</Link>
-            </li>
-            
-        </>
-        }
-      </ul>
+    <nav className={styles.nav}>
+      <h1>Puppy Bowl!</h1>
+      <div>
+        <Link to="/">Home</Link>
+        <Link to="/add-player">Add New Player</Link>
+      </div>
     </nav>
-  )
+  );
 }
-
-export default Navbar;
