@@ -36,7 +36,7 @@ export default function CreatePlayerForm() {
 
   return (
     <div className={styles.container}>
-      <h2>Create a new player:</h2>
+      <h2>Create your own player!</h2>
       <form onSubmit={handleSubmit}>
         {error && <p>{error}</p>}
 
@@ -46,7 +46,6 @@ export default function CreatePlayerForm() {
             value={playerObj.name}
             type="text"
             name="name"
-            placeholder="Name, i.e. Spot"
             onChange={handleChange}
             required
           />
@@ -58,7 +57,6 @@ export default function CreatePlayerForm() {
             value={playerObj.breed}
             type="text"
             name="breed"
-            placeholder="Breed, i.e. Golden Retriever"
             onChange={handleChange}
             required
           />
@@ -70,35 +68,33 @@ export default function CreatePlayerForm() {
             value={playerObj.image}
             type="text"
             name="imageUrl"
-            placeholder="Image URL, i.e. https://puppy.com/image.jpg "
             onChange={handleChange}
             required
           />
         </label>
 
         <label>
-          Choose a status:
+          Status:
           <select
             value={playerObj.status}
             name="status"
             onChange={handleChange}
           >
-            <option value="bench">Bench</option>
-            <option value="field">Field</option>
+            <option value="bench">Field</option>
+            <option value="field">Bench</option>
           </select>
         </label>
 
         <label>
-          Optional Team ID:
+          Team ID:
           <input
             value={playerObj.teamId}
             type="text"
             name="teamId"
-            placeholder="Optional ID, i.e. 1"
             onChange={handleChange}
           />
         </label>
-        <button>Submit</button>
+        <button>Submit!</button>
       </form>
     </div>
   );

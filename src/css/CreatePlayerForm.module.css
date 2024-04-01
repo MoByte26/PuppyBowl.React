@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+    gap: 10px;
+    font-family: fantasy;
+    font-size: xx-large;
+    color: blue;
+  }
+  
+  form {
+    display: flex;
+    gap: 20px;
+  }
+  
+  form input,
+  form select {
+    padding: 5px;
+  }
+  

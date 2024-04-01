@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import AllPlayers from "./components/AllPlayers";
 import SinglePlayer from "./components/SinglePlayer";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 import CreatePlayerForm from "./components/CreatePlayerForm";
 
 function App() {

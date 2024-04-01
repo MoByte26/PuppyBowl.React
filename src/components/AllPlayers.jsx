@@ -32,7 +32,6 @@ export default function AllPlayers() {
         Search:
         <input
           type="text"
-          placeholder="player name"
           onChange={(e) => setSearchParam(e.target.value.toLowerCase())}
         />
       </label>
@@ -42,7 +41,7 @@ export default function AllPlayers() {
           ? playersToDisplay.map((player) => {
               return <PlayerCard key={player.id} player={player} />;
             })
-          : "No players match search term."}
+          : "Oops! No players found!"}
       </div>
     </div>
   );
