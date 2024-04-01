@@ -5,7 +5,8 @@ export default function Navbar() {
   return (
     <nav className={styles.nav}>
       <div>
-      <h1>Welcome to the Puppy Bowl</h1>
+      <h1>Welcome to the Puppy Bowl!</h1>
+      <h6>All puppers are up for adoption, help them find their fur-ever homes!</h6>
       </div>
 
       <div>
